@@ -15,23 +15,23 @@ export default function Home() {
      <div className="flex flex-col items-center justify-center">
       <h1 className="text-lg lg:text-3xl font-bold text-neutral-600 max-w-[428px] text-center">The free, fun, and effective way to learn a language!</h1>
      
-      <div>
+      <div className="flex flex-col items-center gap-y-3 max-w-[330px] w-full">
         <ClerkLoading>
           <Loader className=" h-5 w-5 text-muted-foreground animate-spin"/>
         </ClerkLoading>
         <ClerkLoaded>
           <SignedOut>
             <SignUpButton mode="modal" afterSignInUrl="/learn" afterSignUpUrl="/learn">
-              <Button variant="secondary" size="lg" className="w-full mt-6">Get Started</Button>
+              <Button variant="secondary" size="lg" className="w-full mt-4">Get Started</Button>
             </SignUpButton>
 
             <SignInButton mode="modal" afterSignInUrl="/learn" afterSignUpUrl="/learn">
-              <Button variant="primaryOutline" size="lg" className="w-full mt-6">I already have an account</Button>
+              <Button variant="primaryOutline" size="lg" className="w-full">I already have an account</Button>
             </SignInButton>
           </SignedOut>
           <SignedIn>
             
-            <Button size="lg" variant="secondary" className="w-full mt-6" asChild>
+            <Button size="lg" variant="secondary" className="w-full" asChild>
               <Link href="/learn">
                 Continue Learning
                 </Link>
